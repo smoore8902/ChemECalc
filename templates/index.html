@@ -1,0 +1,45 @@
+{% extends 'base.html'%}
+
+{% block head %}
+
+{% endblock %}
+
+{% block body %}
+<form action="" method="post">
+<div>
+    <label for="species1">Species 1</label>
+    <select name="species1">
+        {% for item in names %}
+        <option name="{{item}}" value="{{item}}">{{ item }}</option>
+        {% endfor %}
+    </select>
+    <label for="species2">Species 2</label>
+    <select name="species2">
+        {% for item in names %}
+        <option name="{{item}}" value="{{item}}">{{ item }}</option>
+        {% endfor %}
+    </select>
+</div>
+<div>
+    <label for="q_val">Q Value</label>
+    <input type="text" name="q_val">
+</div>
+<div>
+    <label for="feed">Feed Fraction</label>
+    <input type="text" name="feed">
+</div>
+<div>
+    <label for="dist">Distillate Fraction</label>
+    <input type="text" name="dist">
+</div>
+<div>
+    <label for="bott">Bottoms Fraction</label>
+    <input type="text" name="bott">
+</div>
+<div>
+    <label for="reflux">Reflux Ratio</label>
+    <input type="text" name="reflux">
+</div>
+    <input type="submit" value="Submit">
+</form>
+{% endblock %}
